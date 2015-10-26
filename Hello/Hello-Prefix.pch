@@ -14,3 +14,74 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#import "LoggerClient.h"
+#import "FileLogC.h"
+
+#ifdef __DC_LOG_FILE__
+#define DC_LOG_FILE DCWriteLog
+#else
+#define DC_LOG_FILE printf
+#endif
+
+#define NSLogF(...) LogMessageF(__FILE__, __LINE__, __FUNCTION__, NULL, 0,  __VA_ARGS__)
+#define NSLogImage(width, height, Data) LogImageData(NULL, 0, width, height, Data)
+
+
+#define  MAX_WIDTH  ([[UIScreen mainScreen] bounds].size.width)
+#define  MAX_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+
+#define SourceFont [UIFont systemFontOfSize:12]
+#define NameFont [UIFont fontWithName:@"TimesNewRomanPS-BoldMT" size:16]
+#define DescriptFont [UIFont systemFontOfSize:15]
+#define DetailFont [UIFont fontWithName:@"TimesNewRomanPSMT" size:18]
+
+#define  IMAGE_WIDTH    100
+#define  IMAGE_HEIGHT   110
+
+#define _DEBUG
+
+#define SinaWeiBo_AppKey @"2187371547"
+#define SinaWeiBo_AppSecret @"d3963e403edbc49048f5217eb81a2d26"
+#define SinaWeiBo_redirectUri @"http://www.myapp.com/login/callback"
+#define SinaWeiBo_URL_FriendsList @"https://api.weibo.com/2/friendships/friends.json"
+#define SinaWeiBo_URL_FollowsList @"https://api.weibo.com/2/friendships/followers.json"
+#define SinaWeiBo_URL_Statuses_public @"https://api.weibo.com/2/statuses/public_timeline.json"
+#define SinaWeiBo_URL_Statuses_friends @"https://api.weibo.com/2/statuses/friends_timeline.json"
+#define SinaWeiBo_URL_Statuses_home    @"https://api.weibo.com/2/statuses/home_timeline.json"
+
+#define SinaWeiBo_URL_User_Show        @"https://api.weibo.com/2/users/show.json"
+
+
+#ifdef _DEBUG
+    #ifdef DEBUG_PRINT_FILENAME
+        #define DEBUG_FILENAME [[NSString stringWithUTF8String:__FILE__] lastPathComponent]
+        #define DEBUG_FILENAME_LINE_SEP ":"
+    #else  //PRINT_FILENAME
+        #define DEBUG_FILENAME @""
+        #define DEBUG_FILENAME_LINE_SEP ""
+    #endif //PRINT_FILENAME
+
+    #define DEBUG_NEW_FMT(fmt) \
+    [NSString stringWithFormat:@"%s(%@%s%d) %@", \
+    __FUNCTION__, \
+    DEBUG_FILENAME, \
+    DEBUG_FILENAME_LINE_SEP, \
+    __LINE__, \
+    fmt]
+
+
+    //打印日志
+    #define DEBUG_LOG(fmt, ...) NSLog(DEBUG_NEW_FMT(fmt), ##__VA_ARGS__)
+    //打印空日志，参数0为了消除编译器的警告
+    #define DEBUG_LOG_NULL NSLog(DEBUG_NEW_FMT(@""), 0)
+    //打印一个变量
+    #define DEBUG_LOG_VALUE(x, fmt)  do {  \
+    DEBUG_LOG(@#x " = " #fmt, x); \
+    } while(0)
+
+#else //DEBUG
+    #define DEBUG_LOG(fmt, ...)
+    #define DEBUG_LOG_NULL
+    #define DEBUG_LOG_VALUE(x, fmt)
+#endif //DEBUG
