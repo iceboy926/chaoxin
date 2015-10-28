@@ -10,6 +10,7 @@
 #import "QRViewController.h"
 #import "QRResultViewController.h"
 #import "ShakeViewController.h"
+#import "InformationViewController.h"
 
 @interface FindViewController ()
 
@@ -166,8 +167,13 @@
 {
     // Navigation logic may go here, for example:
     // Create the next view controller.
-    
-    if([indexPath section] == 1)
+    if([indexPath section] == 0)
+    {
+        InformationViewController *inforView = [[InformationViewController alloc] init];
+        [self.navigationController pushViewController:inforView animated:YES];
+        
+    }
+    else if([indexPath section] == 1)
     {
         
         if([indexPath row] == 0)
@@ -196,7 +202,6 @@
             
         }
         
-
     }
 
 }

@@ -1,0 +1,23 @@
+PODS:
+  - BIReachability (1.2.1):
+    - dp_exec_block_on_main_thread
+    - Reachability
+  - dp_exec_block_on_main_thread (1.0.1)
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - Reachability (3.2)
+
+DEPENDENCIES:
+  - BIReachability (~> 1.2.1)
+  - FMDB (~> 2.5)
+
+SPEC CHECKSUMS:
+  BIReachability: 8aba697f2de4ece27b10c4e5ae8d1e84cebefe9d
+  dp_exec_block_on_main_thread: 27d7bcdaf1c6b41be4321d08f44e7a57a9594f1d
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+
+COCOAPODS: 0.37.2

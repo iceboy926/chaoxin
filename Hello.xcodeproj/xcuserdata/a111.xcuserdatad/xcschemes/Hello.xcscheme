@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "82B612C71B2FBC61007E6D42"
-               BuildableName = "Hello.app"
+               BuildableName = "&#x6f6e;&#x4fe1;.app"
                BlueprintName = "Hello"
                ReferencedContainer = "container:Hello.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "82B612C71B2FBC61007E6D42"
-            BuildableName = "Hello.app"
+            BuildableName = "&#x6f6e;&#x4fe1;.app"
             BlueprintName = "Hello"
             ReferencedContainer = "container:Hello.xcodeproj">
          </BuildableReference>
@@ -62,12 +62,22 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "82B612C71B2FBC61007E6D42"
-            BuildableName = "Hello.app"
+            BuildableName = "&#x6f6e;&#x4fe1;.app"
             BlueprintName = "Hello"
             ReferencedContainer = "container:Hello.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
+         <AdditionalOption
+            key = "MallocStackLogging"
+            value = ""
+            isEnabled = "YES">
+         </AdditionalOption>
+         <AdditionalOption
+            key = "NSZombieEnabled"
+            value = "YES"
+            isEnabled = "YES">
+         </AdditionalOption>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
@@ -80,7 +90,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "82B612C71B2FBC61007E6D42"
-            BuildableName = "Hello.app"
+            BuildableName = "&#x6f6e;&#x4fe1;.app"
             BlueprintName = "Hello"
             ReferencedContainer = "container:Hello.xcodeproj">
          </BuildableReference>

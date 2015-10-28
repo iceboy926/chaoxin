@@ -52,6 +52,9 @@
 
 #define SinaWeiBo_URL_User_Show        @"https://api.weibo.com/2/users/show.json"
 
+#define SinaWeiBo_URL_NearBy_UserList  @"https://api.weibo.com/2/place/nearby_users/list.json"
+#define SinaWeiBo_URL_NearBy_User       @"https://api.weibo.com/2/place/nearby/users.json"
+
 
 #ifdef _DEBUG
     #ifdef DEBUG_PRINT_FILENAME

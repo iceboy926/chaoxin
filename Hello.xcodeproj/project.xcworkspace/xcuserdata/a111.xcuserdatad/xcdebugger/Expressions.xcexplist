@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[SecondView notificationHandler:]:SecondView.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SecondView viewDidLoad]:SecondView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
